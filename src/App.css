@@ -23,8 +23,22 @@ body{
 
 /* NAV BAR */
 
+
+#siteTitle{
+  font-family: 'Satisfy', cursive;
+  padding-right: 40px;
+}
+
 .nav_headerContainer{
   background-color: #60c3c3;
+}
+
+.nav-link{
+  font-weight: bold;
+}
+
+.active{
+  text-decoration: underline;
 }
 
 
