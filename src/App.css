@@ -18,8 +18,6 @@ body{
   background-color: rgb(213, 221, 228);
 }
 
-/* HOME */
-
 
 /* NAV BAR */
 
@@ -46,6 +44,29 @@ body{
   text-align: center;
 }
 
-.ad-img{
-  max-height: 85vh;
+.h1_greeting{
+  font-size: 26px;
+  padding: 10px 0 10px 10px; 
+  
 }
+
+.ad-img{
+  max-width: 70vw;
+}
+
+.iconoCarrito{
+  font-size: 23px;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  display: block;
+}
+
+@media (max-width:768px){
+  
+  .iconoCarrito{
+    top: 20px;
+    right: 85px;
+  }
+}
+

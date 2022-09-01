@@ -1,4 +1,5 @@
 import React from "react";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return (
@@ -35,12 +36,10 @@ const NavBar = () => {
 
 
                         </ul>
-                        <form role="search">
-                            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search"></input>
-                        </form>
                     </div>
                 </div>
             </nav>
+            <CartWidget />
         </div >
     )
 
