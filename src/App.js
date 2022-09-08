@@ -13,7 +13,7 @@ function App() {
       <img src="./images/ad1-bigpic.jpg" alt="welcomeImg" className="ad-img" />
     </div> */}
 
-    <ItemCount stock={5} initial={1} onAdd={0} />
+    {/* <ItemCount stock={5} initial={1} onAdd={0} /> */}
     </>
   );
 }

@@ -67,6 +67,20 @@ body{
   padding-bottom: 20px;
 }
 
+.articuloContainer{
+  padding: 20px;
+}
+
+.card-title{
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.card_precio{
+  font-weight: bold;
+}
+
+
 .cantSpan{
   display: inline-block;
   width: 100px;

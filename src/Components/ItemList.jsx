@@ -4,7 +4,7 @@ import Item from "./Item";
 const ItemList = ({items}) => {
 
     return (
-       <div>
+       <div className="row ">
             {items.map(item => <Item id={item.id} nombre={item.nombre} descripcion={item.descripcion} precio={item.precio} imagen={item.imagen}/>  
             )}
        </div>

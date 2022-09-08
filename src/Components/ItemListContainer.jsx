@@ -33,9 +33,9 @@ const ItemListContainer = () => {
     }, [])
 
     return (
-        <>
+        <div className="container">
             <ItemList items={items} />
-        </>
+        </div>
 
     )
 }
