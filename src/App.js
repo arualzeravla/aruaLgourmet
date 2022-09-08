@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ItemListContainer greeting="BIENVENIDX A MI SITIO DE VIANDAS CASERAS Y SALUDABLES!!"/>
+    <ItemListContainer />
 {/*     <div id="imgDiv">
       <img src="./images/ad1-bigpic.jpg" alt="welcomeImg" className="ad-img" />
     </div> */}

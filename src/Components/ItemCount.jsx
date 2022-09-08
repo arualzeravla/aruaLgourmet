@@ -35,7 +35,7 @@ function ItemCount ({ stock, initial, onAdd }) {
                 <img src="./images/lasagna.jpg" alt="lasagna" className="prdImg" />
                     <div className="input-group">
                         <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremento(cantidad-1)}} />
-                        <input type="text" className="form-control" value={cantidad} />
+                        <span className="cantSpan"> {cantidad}</span>
                         <input type="button" className="btn btn-secondary" value="+" onClick={()=>{incremento(cantidad+1)}} />
                     </div>
                     <div className="d-grid gap-2 pt-3">

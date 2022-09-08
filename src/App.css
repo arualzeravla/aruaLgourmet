@@ -67,6 +67,15 @@ body{
   padding-bottom: 20px;
 }
 
+.cantSpan{
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 7px;
+  background-color: white;
+}
+
 @media (max-width:768px){
   
   .iconoCarrito{
