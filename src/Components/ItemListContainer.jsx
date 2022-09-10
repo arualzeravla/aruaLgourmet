@@ -20,13 +20,13 @@ const ItemListContainer = () => {
         
         ];
 
-        const promesa = new Promise((resolve, reject) => {
+        const getProductos = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productos);
             }, 2000);
         });
 
-        promesa.then((respuesta) => {
+        getProductos.then((respuesta) => {
             setItems(respuesta);
         });
 

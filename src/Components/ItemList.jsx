@@ -4,8 +4,11 @@ import Item from "./Item";
 const ItemList = ({items}) => {
 
     return (
-       <div className="row ">
-            {items.map(item => <Item id={item.id} nombre={item.nombre} descripcion={item.descripcion} precio={item.precio} imagen={item.imagen}/>  
+       <div className="row">
+            {items.map(item => 
+            <div className="col-md-3 articuloContainer" key={item.id}>
+                <Item id={item.id} nombre={item.nombre} descripcion={item.descripcion} precio={item.precio} imagen={item.imagen}/>  
+            </div>
             )}
        </div>
     )

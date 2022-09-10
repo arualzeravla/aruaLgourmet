@@ -1,5 +1,6 @@
 import './App.css';
-import ItemCount from './Components/ItemCount';
+//import ItemCount from './Components/ItemCount';
+import ItemDetailContainer from './Components/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer';
 import NavBar from './Components/NavBar';
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ItemListContainer />
+    <ItemDetailContainer />
 {/*     <div id="imgDiv">
       <img src="./images/ad1-bigpic.jpg" alt="welcomeImg" className="ad-img" />
     </div> */}
