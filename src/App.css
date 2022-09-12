@@ -15,7 +15,7 @@ a:hover{
 }
 
 body{
-  background-color: rgb(213, 221, 228);
+  background-color: rgb(244, 247, 250);
 }
 
 
@@ -101,39 +101,60 @@ body{
 /* PAGINA DETALLES */
 
 
-/* .div_sectionTitle{
+.div_sectionTitle{
   margin-bottom: 20px;
-  width: 90vw;
-  padding: 2% 0 1% 0;
+  padding: 3% 0 1% 0;
+}
+
+.img_detallesPage{
+  max-width: 50vw;
   border-radius: 5px;
+  border: rgb(219, 223, 223) solid 1px;
 }
 
-#img_detallesPage{
-  max-width: 15vw;
-}
-
-#detailContainer{
+.detailContainer{
   display: flex;
 }
 
-#textDetailContainer{
-  padding-left: 10%;
+.textDetailContainer{
+  padding-left: 5%;
+  padding-top: 5%;
+  font-size: 19px;
 }
 
+
+.infoPrecios{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 5%;
+}
+
+
+.p_precioLista{
+  font-weight: bold;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 50px;
+  margin: 0;
+
+}
+
+
 @media (max-width: 768px){
-  #img_detallesPage{
+  .img_detallesPage{
       max-width: 50vw;
   }
 
-  #detailContainer{
+  .detailContainer{
       display: block;
   }
 
-  #descripcion{
+  .descripcion{
       text-align: left;
   }
-  #textDetailContainer{
+  .textDetailContainer{
       padding: 20px 20px 0 0;
   }
 }
- */
+

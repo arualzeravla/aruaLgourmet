@@ -13,9 +13,8 @@ const ItemDetail = ({ id, nombre, imagen, precio, descripcion }) => {
                 <div className="textDetailContainer">
                     <p className="descripcion">{descripcion}</p>
                     <div className="infoPrecios">
-                        <p className="p_precioLista"> {precio}</p>
-
-                        <button type="button" className="btn btn-primary btn_carrito">Agregar al carrito &raquo;</button>
+                        <p className="p_precioLista"> $ {precio}</p>
+                        <button type="button" className="btn btn-dark btn_carrito">Agregar al carrito &raquo;</button>
                     </div>
                 </div>
             </div>
