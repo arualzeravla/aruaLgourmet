@@ -1,0 +1,53 @@
+/* ---------------------------------- NORMALIZAR ---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover{
+    color: black;
+  }
+  
+  body{
+    background-color: rgb(244, 247, 250);
+  }
+  
+  
+  /* ---------------------------------- NAVBAR ---------------------------------- */
+  
+  
+  #siteTitle{
+    font-family: 'Satisfy', cursive;
+    padding-right: 40px;
+  }
+  
+  .nav_headerContainer{
+    background-color: #60c3c3;
+  }
+  
+  .nav-link{
+    font-weight: bold;
+  }
+  
+  .iconoCarrito{
+    font-size: 23px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: block;
+  }
+  
+    
+  @media (max-width:768px){
+    
+    .iconoCarrito{
+      top: 20px;
+      right: 85px;
+    }
+  }

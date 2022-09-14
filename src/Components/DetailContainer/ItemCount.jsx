@@ -23,16 +23,15 @@ function ItemCount ({ stock, initial, onAdd }) {
             setItemAdd(cantidad + itemAdd)
             setItemStock(itemStock - cantidad)
             setCantidad(initial)
+            alert("Tu producto ha sido añadido al carrito!")
         }
     }
 
 
     return (
-        <div className="container">
-            <div className="row justify-content-around">
-                <div className="col-2">
-                <p style={{fontSize: 20}}><strong>LASAGNA DE LA HUERTA</strong></p>
-                <img src="./images/lasagna.jpg" alt="lasagna" className="prdImg" />
+        <div >
+            <div>
+                <div >
                     <div className="input-group">
                         <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremento(cantidad-1)}} />
                         <span className="cantSpan"> {cantidad}</span>
@@ -42,10 +41,6 @@ function ItemCount ({ stock, initial, onAdd }) {
                         <input type="button" className="btn btn-secondary" value="Agregar al carrito" onClick={()=>{agregarCarrito()}}/>
                     </div>
 
-                </div>
-                <div className="col-2">
-                    <h1 id="h1_tituloCarrito">Tu Carrito</h1>
-                    <p>Lasagna de la Huerta - Total: {itemAdd}</p>
                 </div>
             </div>
         </div>

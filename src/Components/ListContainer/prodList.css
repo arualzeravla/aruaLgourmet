@@ -1,0 +1,52 @@
+/* ---------------------------------- NORMALIZAR ---------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover{
+    color: black;
+  }
+  
+  body{
+    background-color: rgb(244, 247, 250);
+  }
+  
+  
+  /* ---------------------------------- MENU ---------------------------------- */
+
+  
+  .container{
+    text-align: center;
+  }
+  
+  .menuIcon{
+    width: 70px;
+    padding-top: 10px;
+  }
+  
+  .prdImg{
+    max-width: 200px;
+    padding-bottom: 20px;
+  }
+  
+  .articuloContainer{
+    padding: 20px;
+  }
+  
+  .card-title{
+    padding: 5px 15px;
+    font-weight: bold;
+  }
+  
+  .card_precio{
+    font-weight: bold;
+  }
+  
