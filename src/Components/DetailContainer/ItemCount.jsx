@@ -1,10 +1,13 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import CartPreview from "../Cart/CartPreview";
+import { CartContext } from "../Context/CartContext";
 
-function ItemCount ({ stock, initial, onAdd }) {
-    const [cantidad, setCantidad] = useState(initial);
-    const [itemStock, setItemStock] = useState(stock);
-    const [itemAdd, setItemAdd] = useState(onAdd);
+const ItemCount = (props) => {
+    const {item} = props;
+    const {cart, addItem} = useContext(CartContext);
+    const [cantidad, setCantidad] = useState(props.cantidad);
+    const [itemStock, setItemStock] = useState(props.stock);
 
     const decremento = (valor)=>{
         if(valor > 0){
@@ -20,29 +23,31 @@ function ItemCount ({ stock, initial, onAdd }) {
 
     const agregarCarrito = () => {
         if(cantidad <= itemStock ){
-            setItemAdd(cantidad + itemAdd)
+            addItem(item, cantidad)
             setItemStock(itemStock - cantidad)
-            setCantidad(initial)
+            setCantidad(1)
             alert("Tu producto ha sido añadido al carrito!")
+            
+            let div_counter = document.getElementById("div_counter");
+            div_counter.innerHTML = <CartPreview items={cart}/>
+            //console.log(cart);
+
         }
     }
 
 
     return (
-        <div >
-            <div>
-                <div >
-                    <div className="input-group">
-                        <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremento(cantidad-1)}} />
-                        <span className="cantSpan"> {cantidad}</span>
-                        <input type="button" className="btn btn-secondary" value="+" onClick={()=>{incremento(cantidad+1)}} />
-                    </div>
-                    <div className="d-grid gap-2 pt-3">
-                        <input type="button" className="btn btn-secondary" value="Agregar al carrito" onClick={()=>{agregarCarrito()}}/>
-                    </div>
 
-                </div>
+        <div id="div_counter">
+            <div className="input-group" >
+                <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremento(cantidad-1)}} />
+                <span className="cantSpan"> {cantidad} </span>
+                <input type="button" className="btn btn-secondary" value="+" onClick={()=>{incremento(cantidad+1)}} />
             </div>
+            <div className="d-grid gap-2 pt-3">
+                <input type="button" className="btn btn-secondary" value="Agregar al carrito" onClick={()=>{agregarCarrito()}}/>
+            </div>
+
         </div>
     )
 }

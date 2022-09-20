@@ -15,7 +15,6 @@ function ItemListContainer () {
 
         customFetch().then(response => {
             setProductos(response)
-            console.log(productos);
         })
 
     },[])

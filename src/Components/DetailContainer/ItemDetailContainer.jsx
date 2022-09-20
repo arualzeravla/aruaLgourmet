@@ -16,14 +16,13 @@ function ItemDetailContainer () {
 
         getProdById(id).then(response => {
             setProd(response)
-            console.log(prod);
         })
 
     },[])
 
     return (
         <div>
-            <ItemDetail props={prod} />
+            <ItemDetail item={prod} />
         </div>
     )
 }

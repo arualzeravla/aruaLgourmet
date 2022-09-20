@@ -1,5 +1,6 @@
 import Productos from "./Productos";
 
+
 export const customFetch = () => {
     return new Promise ((resolve) => {
         resolve(Productos);

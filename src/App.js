@@ -4,12 +4,14 @@ import Inicio from './Components/Home/Inicio';
 import NavBar from './Components/NavBar/NavBar';
 import ItemDetailContainer from './Components/DetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ListContainer/ItemListContainer';
+import Provider from './Components/Context/CartContext';
 
 
 
 function App() {
   return (
     <>
+  <Provider>
     <BrowserRouter>
     <NavBar />
       <Routes>
@@ -18,6 +20,7 @@ function App() {
         <Route exact path="/menu/:id" element= {<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
+  </Provider>
     
     </>
   );
