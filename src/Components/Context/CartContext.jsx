@@ -12,7 +12,7 @@ const CartProvider = (props) => {
 
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
-            let producto = cart.find(x => x.id === item.id);
+            let producto = cart.find(prodYaEnCarrito => prodYaEnCarrito.id === item.id);
             cart[cart.indexOf(producto)].cantidad += cantidad;
             setCart([...cart]);
         } else {

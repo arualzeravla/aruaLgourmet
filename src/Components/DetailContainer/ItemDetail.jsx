@@ -14,7 +14,6 @@ const ItemDetail = ({item}) => {
         setCantidad(cantidad)
         addToCart(item, cantidad)
     }
-
     
     return (
         <div key={item.id} className="div_containerDetails">
