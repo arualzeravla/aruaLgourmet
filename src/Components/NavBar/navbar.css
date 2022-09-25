@@ -38,16 +38,29 @@
   .iconoCarrito{
     font-size: 23px;
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 30px;
     display: block;
+  }
+
+  .span_cartUnits{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    padding-top: 1px;
+    text-align: center;
   }
   
     
   @media (max-width:768px){
     
     .iconoCarrito{
-      top: 20px;
+      top: 12px;
       right: 85px;
     }
   }

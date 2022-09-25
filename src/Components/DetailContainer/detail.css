@@ -1,4 +1,4 @@
-//* ---------------------------------- NORMALIZAR ---------------------------------- */
+/* ---------------------------------- NORMALIZAR ---------------------------------- */
 
 * {
     margin: 0;
@@ -54,10 +54,6 @@
   }  
   
 
-  .infoPrecios{
-    margin-top: 50px;
-  }
-
   .p_precioLista{
     font-weight: bold;
     font-size: 22px;
@@ -65,6 +61,46 @@
     padding-right: 50px;
   
   } 
+
+
+
+  /*  -------- Cart Preview --------   */
+
+
+  .div_counter{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+
+  }
+
+
+  .h5_miCarrito{
+    font-weight: bold;
+  }
+
+  .div_cartPrev{
+    text-align: right;
+    margin-top: 30px;
+    margin-left: 50%;
+    padding: 2% 4%;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  .ul_cartPrev{
+    list-style: none;
+  }
+
+  .span_cantidad{
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .link_carrito{
+    font-weight: bold;
+    text-decoration: underline;
+  }
   
   
   @media (max-width: 768px){
@@ -80,8 +116,19 @@
         text-align: left;
     }
     .textDetailContainer{
-        padding: 20px 20px 0 0;
+        padding: 20px 20px 0 40px;
     }
+
+    .p_precioLista{
+      text-align: left;
+    }
+
+    .div_cartPrev{
+      text-align: left;
+      margin-left: 0;
+      margin-right: 50%;
+    }
+
   }
   
   

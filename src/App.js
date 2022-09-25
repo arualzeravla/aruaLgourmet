@@ -4,23 +4,25 @@ import Inicio from './Components/Home/Inicio';
 import NavBar from './Components/NavBar/NavBar';
 import ItemDetailContainer from './Components/DetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ListContainer/ItemListContainer';
-import Provider from './Components/Context/CartContext';
+import CartProvider from './Components/Context/CartContext';
+import Cart from './Components/Cart/Cart';
 
 
 
 function App() {
   return (
     <>
-  <Provider>
+  <CartProvider>
     <BrowserRouter>
     <NavBar />
       <Routes>
         <Route exact path="/" element= {<Inicio />} />
         <Route exact path="/menu" element= {<ItemListContainer />} />
         <Route exact path="/menu/:id" element= {<ItemDetailContainer />} />
+        <Route exact path="/cart" element= {<Cart />} />
       </Routes>
     </BrowserRouter>
-  </Provider>
+  </CartProvider>
     
     </>
   );

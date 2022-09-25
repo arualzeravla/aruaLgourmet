@@ -1,23 +1,28 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../Context/CartContext";
 
 
-const CartPreview = ({cart}) => {
+const CartPreview = ({ cart }) => {
 
+    const { totalPrice } = useContext(CartContext)
 
     return (
-        <div>
-            <h5>Mi Carrito</h5>
-            <div className="row"> {cart}
-                {cart.map(item => (
-                    <li key={item.id}>
-                        <span>{item.nombre}</span>
-                        <span>{item.precio}</span>
-                        <span>{item.cantidad}</span>
-                    </li>
-                ))}
+        <div className="div_cartPrev">
+            <h5 className="h5_miCarrito">Mi Carrito</h5>
+            <div className="row">
+                <ul className="ul_cartPrev">
+                    {cart.map(item => (
+                        <li key={item.id}>
+                            <span className="span_cantidad">{item.cantidad}</span>
+                            <span>{item.nombre}</span>
+                        </li>
+                    ))}
+                </ul>
+                <p>TOTAL: $ {totalPrice().toFixed(2) }</p>
             </div>
-            <button><Link to="/cart">Ir al Carrito</Link></button>
+            <Link to="/cart" className="link_carrito">Ir al Carrito</Link>
         </div>
     )
 }

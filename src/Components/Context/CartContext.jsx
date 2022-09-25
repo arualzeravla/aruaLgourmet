@@ -1,38 +1,77 @@
 import React, { useState, createContext } from "react";
 
+
+//1. Creo el contexto
 export const CartContext = createContext();
 
-const Provider = ({children}) => {
+
+//2. Creo el proveedor
+
+const CartProvider = (props) => {
     const [cart, setCart] = useState([]);
 
-    const addItem = (item, cantidad) => {
+    const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
             let producto = cart.find(x => x.id === item.id);
             cart[cart.indexOf(producto)].cantidad += cantidad;
             setCart([...cart]);
         } else {
             item.cantidad = cantidad;
-            setCart(cart.push(item)); 
+            setCart([...cart, item]);
         }
-    }
-
-    const clear = () => {
-        setCart([]);
     }
 
     const isInCart = (id) => {
         return cart.some(item => item.id === id);
     }
 
-    const cartTotal = () => {
-        return cart.reduce((total, item) => total+=item.cantidad, 0);
+
+    const emptyCart = () => {
+        setCart([]);
     }
 
+
+    const totalUnits = () => {
+        let copia = [...cart]
+        let count = 0;
+        copia.forEach((item) => {
+            count += item.cantidad
+        })
+        return count;
+    }
+
+
+    const totalPrice = () => {
+        let copia = [...cart]
+        let count = 0;
+        copia.forEach((item) => {
+            count += item.cantidad * item.precio
+        })
+        return count;
+    }
+
+    const deleteOne = (id) => {
+        let itemBorrado = cart.find(item => item.id === id);
+        if (itemBorrado.cantidad > 0) {
+            itemBorrado.cantidad = itemBorrado.cantidad - 1
+            setCart([...cart])
+            if (itemBorrado.cantidad === 0) {
+                let copia = [...cart]
+                copia.splice(copia.indexOf(itemBorrado),1)
+                setCart(copia)
+            }
+        }
+    }
+
+
+
     return (
-        <CartContext.Provider value={{cart, addItem, clear, isInCart}}>
-            {children}
+        //El contexto tiene la propiedad "Provider" que es la que englobará y proveerá de recursos a los componentes indicados en App.js
+
+        <CartContext.Provider value={{ cart, addToCart, emptyCart, isInCart, totalUnits, totalPrice, deleteOne }}>
+            {props.children}
         </CartContext.Provider>
     )
 }
 
-export default Provider;
+export default CartProvider;
