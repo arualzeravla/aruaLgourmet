@@ -28,7 +28,7 @@
   }
   
   .img_detallesPage{
-    max-width: 50vw;
+    width: 20%;
     border-radius: 5px;
     border: rgb(219, 223, 223) solid 1px;
     margin-left: 40px;
