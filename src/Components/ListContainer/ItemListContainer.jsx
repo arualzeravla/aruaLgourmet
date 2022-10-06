@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { customFetch } from "../../utils/getProducts";
+import React, { useState, useEffect } from "react";
+import  {getFirestore, collection, getDocs } from "firebase/firestore"
 import "./prodList.css";
+
 
 import ItemList from "./ItemList";
 
@@ -12,10 +11,13 @@ function ItemListContainer () {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
+    
+        const db = getFirestore();
+        const itemlist = collection(db, "items");
+        getDocs(itemlist).then(response => {
+            setProductos( response.docs.map ( (doc) => ( { "id": doc.id, ...doc.data()} ) ) )
+        } )
 
-        customFetch().then(response => {
-            setProductos(response)
-        })
 
     },[])
 
