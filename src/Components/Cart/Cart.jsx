@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 
@@ -18,7 +17,7 @@ const Cart = () => {
                                 <span className="span_cantidad">{item.cantidad}</span>
                                 <span>{item.nombre}</span>
                                 <span>$ {item.precio.toFixed(2)}</span>
-                                <span onClick={() => { deleteOne(item.id) }}><i class="fa-solid fa-trash"></i></span>
+                                <span onClick={() => { deleteOne(item.id) }}><i className="fa-solid fa-trash"></i></span>
                             </li>
                         )) :
                         <div> 
@@ -31,7 +30,7 @@ const Cart = () => {
                     {cart.length > 0 ?
                         <div>
                             <p>TOTAL: $ {totalPrice().toFixed(2)}</p>
-                            <button> Ir al Pago</button>
+                            <button><Link to="/checkout"> Ir al Pago</Link></button>
                             <button onClick={()=>{emptyCart()}}>Vaciar Carrito</button>
                         </div> :
                         ""

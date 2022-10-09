@@ -1,0 +1,30 @@
+/* FORM */
+
+.div_Container{
+    display: flex;
+    flex-flow: row nowrap ;
+    margin: 50px 0 20px 70px;
+}
+
+.div_checkoutForm{
+    width: 35%;
+    margin-right: 100px; 
+}
+
+.p_sectionTitle1{
+    font-weight: bold;
+}
+
+.p_sectionTitle2{
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.btn_confirm{
+    padding: 5px;
+    margin-top: 18px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #00c0c0;
+    color: white;
+}
