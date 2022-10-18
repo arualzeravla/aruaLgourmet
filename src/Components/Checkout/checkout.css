@@ -28,3 +28,62 @@
     background-color: #00c0c0;
     color: white;
 }
+
+
+.p_error{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.link_volver{
+    padding: 5px;
+    margin-top: 18px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #00c0c0;
+    color: white;
+}
+
+.li_cartPrev{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_precioTot{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(22, 121, 121);
+    margin-top: 80px;
+}
+
+.span_name {
+    padding-right: 40px;
+    width: 230px;
+}
+
+.span_price{
+    padding-right: 15px;
+    text-align: right;
+}
+
+.span_cant{
+    padding-right: 40px;
+    width: 40px;
+    text-align: right;
+}
+
+#div_errorForm{
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.h3_orderId{
+    background-color: #fff;
+    margin: 30px 20% 0 20%;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 5px;
+}

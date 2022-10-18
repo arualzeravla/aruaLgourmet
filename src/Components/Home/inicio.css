@@ -5,15 +5,6 @@
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
-a{
-  text-decoration: none;
-  color: black;
-}
-
-a:hover{
-  color: black;
-}
-
 body{
   background-color: rgb(244, 247, 250);
 }
@@ -21,8 +12,9 @@ body{
 /* ---------------------------------- BODY ---------------------------------- */
 
 .h1_bienvenido{
-  font-size: 24px;
-  padding: 10px 0;
+  font-size: 20px;
+  padding: 18px 30px;
+  font-weight: bold;
 }
 
 .ad-img{

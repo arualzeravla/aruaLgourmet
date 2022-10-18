@@ -20,8 +20,13 @@ const NavBar = () => {
                             <li className="nav-item">
                                 <Link to={"/"} className="nav-link active" aria-current="page">INICIO</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to={"/menu"} className="nav-link">MENÚ</Link>
+
+                            <li className="nav-item dropdown">
+                                <Link to={"/menu"} className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MENÚ </Link>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <Link className="dropdown-item" to={"/categoria/principales"}>Platos Principales</Link>
+                                    <Link className="dropdown-item" to={"/categoria/postres"}>Postres</Link>
+                                </div>
                             </li>
 
                         </ul>

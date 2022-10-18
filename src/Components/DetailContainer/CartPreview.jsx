@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 
 
+
 const CartPreview = ({ cart }) => {
 
     const { totalPrice } = useContext(CartContext)
@@ -22,7 +23,10 @@ const CartPreview = ({ cart }) => {
                 </ul>
                 <p>TOTAL: $ {totalPrice().toFixed(2) }</p>
             </div>
-            <Link to="/cart" className="link_carrito">Ir al Carrito</Link>
+            <div className="div_linksCartPrev">
+                <p><Link to="/cart" className="link_carrito">Ir al Carrito</Link></p>
+                <p><Link to="/" className="link_carrito">Seguir comprando</Link></p>
+            </div>
         </div>
     )
 }

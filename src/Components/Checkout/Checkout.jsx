@@ -11,11 +11,10 @@ const Checkout = () => {
 
     if(orderId){
         return(
-            <h1>
-                Gracias por tu compra! 
-                El código de tu orden es: {orderId}
-
-            </h1>
+            <div className="div_containerOrderData">
+                <h1 className="h1_gracias">Gracias por tu compra! </h1>
+                <h3 className="h3_orderId">El código de tu orden es {orderId} </h3>           
+            </div>
         )
     }
     else {
