@@ -27,5 +27,3 @@ Correr la instalación de Firebase `npm i Firebase`
 Correr el comando `npm start`. 
 
 Se abrirá el navegador en la dirección [http://localhost:3000/]
-
-Para acceder al Deploy alojado en Netlify: [https://arualgourmet.netlify.app/]
